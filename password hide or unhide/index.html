@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password hide or show</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <input type="password" placeholder="password" id="pass">
+            <img src="./images/show.png" alt="" id="eyeicon">
+        </div>
+    </div>
+</body>
+<script>
+    let inp=document.getElementById("pass");
+    let icon=document.getElementById("eyeicon");
+
+    icon.onclick=()=>{
+        if(inp.type=="password"){
+            inp.type="text";
+            icon.src="./images/hide.png"
+        }
+        else{
+            inp.type="password";
+            icon.src="./images/show.png"
+        }
+
+    }
+</script>
+</html>
